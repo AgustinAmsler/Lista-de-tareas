@@ -24,3 +24,6 @@ class Lista_de_tareas:
     def comprobar_cantidad_de_tareas(self, numero):
         return len(self.__lista_de_tareas) == numero
 
+    def eliminar_tarea(self, tarea):
+        del self.__lista_de_tareas[tarea]
+
