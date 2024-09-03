@@ -3,6 +3,7 @@ class Tarea:
         self.__titulo = titulo
         self.__descripcion = descripcion
         self.__hora_limite = hora_limite
+        self.__tarea_realizada = False
 
     def comprobar_titulo(self, titulo):
         return self.__titulo == titulo
@@ -12,6 +13,12 @@ class Tarea:
 
     def comprobar_hora_limite(self, hora_limite):
         return self.__hora_limite == hora_limite
+
+    def marcar_tarea_como_realizada(self):
+        self.__tarea_realizada = True
+
+    def comprobar_tarea_realizada(self):
+        return self.__tarea_realizada == True
 
 
 class Lista_de_tareas:
@@ -27,3 +34,8 @@ class Lista_de_tareas:
     def eliminar_tarea(self, tarea):
         del self.__lista_de_tareas[tarea]
 
+    def marcar_tarea_como_realizada(self, tarea):
+        self.__lista_de_tareas[tarea].marcar_tarea_como_realizada()
+
+    def comprobar_tarea_realizada(self, tarea):
+        return self.__lista_de_tareas[tarea].comprobar_tarea_realizada()

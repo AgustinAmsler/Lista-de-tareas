@@ -39,3 +39,13 @@ def test_eliminar_1_tarea_especifica_de_la_lista_de_tareas():
     lista_de_tareas.agregar_tarea(tarea3)
     lista_de_tareas.eliminar_tarea(2)
     assert lista_de_tareas.comprobar_cantidad_de_tareas(2)
+
+
+def test_marcar_tarea_como_realizada():
+    lista_de_tareas = Lista_de_tareas()
+    tarea1 = Tarea("Hacer la cama", "Hacer la cama despues de despertarme", "08:00:00")
+    tarea2 = Tarea("Lavarse los dientes", "Cepillar durante 3 minutos", "08:15:00")
+    lista_de_tareas.agregar_tarea(tarea1)
+    lista_de_tareas.agregar_tarea(tarea2)
+    lista_de_tareas.marcar_tarea_como_realizada(1)
+    assert lista_de_tareas.comprobar_tarea_realizada(1)
