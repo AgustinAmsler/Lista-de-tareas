@@ -20,6 +20,9 @@ class Tarea:
     def comprobar_tarea_realizada(self):
         return self.__tarea_realizada == True
 
+    def __str__(self):
+        return f"{self.__titulo} - {self.__descripcion} (Hora límite: {self.__hora_limite})"
+
 
 class Lista_de_tareas:
     def __init__(self):
@@ -31,8 +34,9 @@ class Lista_de_tareas:
     def comprobar_cantidad_de_tareas(self, numero):
         return len(self.__lista_de_tareas) == numero
 
-    def eliminar_tarea(self, tarea):
-        del self.__lista_de_tareas[tarea]
+    def eliminar_tarea(self, index):
+        if 0 <= index < len(self.__lista_de_tareas):
+            del self.__lista_de_tareas[index]
 
     def marcar_tarea_como_realizada(self, tarea):
         self.__lista_de_tareas[tarea].marcar_tarea_como_realizada()
