@@ -24,7 +24,7 @@ class Tarea:
         return f"{self.__titulo} - {self.__descripcion} (Hora límite: {self.__hora_limite})"
 
 
-class Lista_de_tareas:
+class Lista_De_Tareas:
     def __init__(self):
         self.__lista_de_tareas = []
 
@@ -34,9 +34,12 @@ class Lista_de_tareas:
     def comprobar_cantidad_de_tareas(self, numero):
         return len(self.__lista_de_tareas) == numero
 
-    def eliminar_tarea(self, index):
-        if 0 <= index < len(self.__lista_de_tareas):
-            del self.__lista_de_tareas[index]
+    def eliminar_tarea(self, tarea):
+        if tarea in self.__lista_de_tareas:
+            self.__lista_de_tareas.remove(tarea)
+
+    def comprobar_lista_de_tareas_contiene_tarea(self, tarea):
+        return tarea in self.__lista_de_tareas
 
     def marcar_tarea_como_realizada(self, tarea):
         self.__lista_de_tareas[tarea].marcar_tarea_como_realizada()

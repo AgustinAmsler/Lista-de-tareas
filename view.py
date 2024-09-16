@@ -3,14 +3,14 @@ from PySide6.QtWidgets import (
     QListWidget, QPushButton, QLineEdit, QLabel, QMessageBox
 )
 from PySide6.QtCore import Qt
-from main import Tarea, Lista_de_tareas
+from main import Tarea, Lista_De_Tareas
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.lista_de_tareas = Lista_de_tareas()
+        self.lista_de_tareas = Lista_De_Tareas()
 
         self.setWindowTitle("Lista de Tareas")
         self.setGeometry(300, 300, 400, 300)
