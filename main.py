@@ -42,7 +42,10 @@ class Lista_De_Tareas:
         return tarea in self.__lista_de_tareas
 
     def marcar_tarea_como_realizada(self, tarea):
-        self.__lista_de_tareas[tarea].marcar_tarea_como_realizada()
+        if tarea in self.__lista_de_tareas:
+            tarea.marcar_tarea_como_realizada()
 
     def comprobar_tarea_realizada(self, tarea):
-        return self.__lista_de_tareas[tarea].comprobar_tarea_realizada()
+        if tarea in self.__lista_de_tareas:
+            return tarea.comprobar_tarea_realizada()
+        return False

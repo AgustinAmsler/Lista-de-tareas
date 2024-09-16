@@ -48,5 +48,5 @@ def test_marcar_tarea_como_realizada():
     tarea2 = Tarea("Lavarse los dientes", "Cepillar durante 3 minutos", "08:15:00")
     lista_de_tareas.agregar_tarea(tarea1)
     lista_de_tareas.agregar_tarea(tarea2)
-    lista_de_tareas.marcar_tarea_como_realizada(1)
-    assert lista_de_tareas.comprobar_tarea_realizada(1)
+    lista_de_tareas.marcar_tarea_como_realizada(tarea2)
+    assert lista_de_tareas.comprobar_tarea_realizada(tarea2)
