@@ -9,6 +9,11 @@ def test_crear_tarea():
     assert tarea.comprobar_hora_limite("08:00:00")
 
 
+def test_comprueba_lista_de_tareas_esta_vacia():
+    lista_de_tareas = ListaDeTareas()
+    assert lista_de_tareas.comprobar_cantidad_de_tareas(0)
+    assert not lista_de_tareas.comprobar_cantidad_de_tareas(1)
+
 def test_agregar_1_tarea_a_una_lista_de_tareas():
     lista_de_tareas = ListaDeTareas()
     tarea = Tarea("Hacer la cama", "Hacer la cama despues de despertarme", "08:00:00")
