@@ -24,7 +24,7 @@ class Tarea:
         return f"{self.__titulo} - {self.__descripcion} (Hora límite: {self.__hora_limite})"
 
 
-class Lista_De_Tareas:
+class ListaDeTareas:
     def __init__(self):
         self.__lista_de_tareas = []
 
